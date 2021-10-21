@@ -1,4 +1,4 @@
-# lob-blog-code-samples
+# Bulk Address Verification with Postgres and Node 
 
 This code sample outlines how to leverage Lob's Bulk Address Verification tool to validate the deliverability of addresses stored in a local Postgres database. 
 
