@@ -1,0 +1,32 @@
+<html>
+<head>
+  <title>Lob Express App</title>
+</head>
+
+<body>
+  <h1>Lob Address Verification API</h1>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Street</th>
+      <th>State</th>
+      <th>City</th>
+      <th>Zip Code</th>
+    </tr>
+    <% addresses.forEach(function(addr) { %>
+    <tr>
+      <td> <%= addr.name %> </td>
+      <td> <%= addr.primary_line %> </td>
+      <td> <%= addr.state %> </td>
+      <td> <%= addr.city %> </td>
+      <td> <%= addr.zip_code %> </td>
+      <td><%= addr.full_address %></td>
+      <td><%= addr.status %></td>
+      <td><%= addr.action %></td>
+    </tr>
+    <% }) %>      
+  </table>
+  <p> Scanned records: <%= scanned %>, valid: <%= valid %>, invalid: <%= invalid %> </p>
+
+</body>
+</html>
