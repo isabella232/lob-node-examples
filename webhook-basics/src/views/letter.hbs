@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Lob Webhooks & API tutorial.">
+    <meta name="author" content="Lob">
+    <title>Lob Webhooks & API | Tutorials</title>
+
+    <!-- Favicons-->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" type="image/x-icon" href="img/apple-touch-icon-57x57-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114"
+        href="img/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144"
+        href="img/apple-touch-icon-144x144-precomposed.png">
+
+    <!-- GOOGLE WEB FONT -->
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500,600" rel="stylesheet">
+
+    <!-- BASE CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/menu.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="/css/vendors.css" rel="stylesheet">
+
+    <!-- YOUR CUSTOM CSS -->
+    <link href="/css/custom.css" rel="stylesheet">
+
+    <!-- MODERNIZR MENU -->
+    <script src="/js/modernizr.js"></script>
+
+</head>
+
+<body>
+
+    <div id="preloader">
+        <div data-loader="circle-side"></div>
+    </div><!-- /Preload -->
+
+    <div id="loader_form">
+        <div data-loader="circle-side-2"></div>
+    </div><!-- /loader_form -->
+
+    <nav>
+        <ul class="cd-primary-nav">
+            <li><a href="/" class="animated_link">Home</a></li>
+            <li><a href="/getLetters" class="animated_link">Letters</a></li>
+        </ul>
+    </nav>
+    <!-- /menu -->
+
+    <div class="container-fluid full-height">
+        <div class="row row-height">
+            <div class="col-lg-12 content-right" id="start" style="height:auto">
+                <div class="row">
+
+                    <div class="row">
+                        <div class="jumbotron">
+                            <h1 class="display-4">{{letter.description}}</h1>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="list-group">
+                                        <a href="#" class="list-group-item list-group-item-action active">
+                                            <div class="d-flex w-100 justify-content-between">
+                                                <h5 class="mb-1">To: {{letter.to.name}}</h5>
+                                                <small>{{letter.to.date_created}}</small>
+                                            </div>
+                                            <p class="mb-1">Phone: {{letter.to.phone}}.</p>
+                                            <p class="mb-1">Phone: {{letter.to.email}}.</p>
+                                            <p class="mb-1">Address 1: {{letter.to.address_line1}}.</p>
+                                            <small>Address 2: {{letter.to.address_line2}}</small>
+                                            <small>City: {{letter.to.address_city}}</small>
+                                            <small>State: {{letter.to.address_state}}</small>
+                                            <small>Zip: {{letter.to.address_zip}}</small>
+                                            <small>Country: {{letter.to.address_country}}</small>
+
+                                        </a>
+
+                                    </div>
+
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="list-group">
+
+                                        <a href="#" class="list-group-item list-group-item-action">
+                                            <div class="d-flex w-100 justify-content-between">
+                                                <h5 class="mb-1">From: {{letter.from.name}}</h5>
+                                                <small>{{letter.from.date_created}}</small>
+                                            </div>
+                                            <p class="mb-1">Phone: {{letter.from.phone}}.</p>
+                                            <p class="mb-1">Phone: {{letter.from.email}}.</p>
+                                            <p class="mb-1">Address 1: {{letter.from.address_line1}}.</p>
+                                            <small>Address 2: {{letter.from.address_line2}}</small>
+                                            <small>City: {{letter.from.address_city}}</small>
+                                            <small>State: {{letter.from.address_state}}</small>
+                                            <small>Zip: {{letter.from.address_zip}}</small>
+                                            <small>Country: {{letter.from.address_country}}</small>
+                                        </a>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <p class="lead">Delivery date:{{letter.expected_delivery_date}}</p>
+                            <hr class="my-4">
+                            <p class="mb-1">Carrier: {{letter.carrier}}.</p>
+                            <p>Carrier Type: {{letter.mail_type}}.</p>
+                            <hr class="my-4">
+                            <p>Status:
+                                {{#if letter.event_type.id}}
+                                {{letter.event_type.id}}
+                                {{else}}
+                                No event yet
+                                {{/if}}
+                            </p>
+                            <a class="btn btn-primary btn-lg" href="/getLetters" role="button">Back</a>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+            <!-- /row-->
+        </div>
+        <!-- /container-fluid -->
+
+        <div class="cd-overlay-nav">
+            <span></span>
+        </div>
+        <!-- /cd-overlay-nav -->
+
+        <div class="cd-overlay-content">
+            <span></span>
+        </div>
+        <!-- /cd-overlay-content -->
+
+        <a href="#0" class="cd-nav-trigger">Menu<span class="cd-icon"></span></a>
+        <!-- /menu button -->
+
+
+
+        <!-- COMMON SCRIPTS -->
+        <script src="/js/jquery-3.5.1.min.js"></script>
+        <script src="/js/common_scripts.min.js"></script>
+        <script src="/js/velocity.min.js"></script>
+        <script src="/js/functions.js"></script>
+
+</body>
+
+</html>
