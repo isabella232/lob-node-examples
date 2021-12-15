@@ -8,16 +8,16 @@ For a step by step explaination of how we built this project - checkout the comp
 ## Prerequisites
 To proceed you need the following installed on your local machine: 
 
-[Node.js](https://nodejs.org/)
-[Ngrok](https://ngrok.com/download)
-[MongoDB](https://www.mongodb.com/try/download/community)
+* [Node.js](https://nodejs.org/)
+* [Ngrok](https://ngrok.com/download)
+* [MongoDB](https://www.mongodb.com/try/download/community)
 
 You’ll also need to have a basic understanding of Node.js and ES6 syntax. Make sure you’re signed up for your [free Lob account](https://dashboard.lob.com/#/register), which has a quick registration.
 
 ## Install packages 
 Start off by cloning the repo to your preferred location and entering `lob-node-examples/webhook-basics` 
 
-To run this code, you'll need to install a handful of dependencies, including Lob, Express, Mongoose and nodemon packages. We assume you already have node.js and npm installed.
+To run this code, you'll need to install a handful of dependencies, We assume you already have node.js and npm installed.
 
 All dependencies are setup in `package.json`
 
@@ -38,7 +38,7 @@ Open the .env file and add your API keys.
 
 LOB_API_KEY = test_6b2fXXXXXXXXXXXXXXXXXbd3586
 
-Test Lob webhooks
+## Test Lob webhooks
 To quickly test out Lob webhooks, we will use ngrok. This tool generates a unique URL that lets us receive webhooks locally by creating a tunnel between our application and the internet. Using ngrok, we expose our local web server to the internet and receive Lob webhooks without having to deploy our application on a live server.
 
 Download and install the ngrok software compatible with your operating system.
@@ -47,6 +47,7 @@ After downloading ngrok to your local machine, run the installation file to open
 
 `ngrok http 3500`
 
+## Configure webhooks in Lob
 Then, on the Lob dashboard, open the Webhooks menu on the sidebar.  Note the Test/Live toggle, located at the top of the webhooks menu page.
 
 Next, select the Create button to create a new webhook record, 
