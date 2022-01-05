@@ -1,0 +1,46 @@
+{
+  "name": "lobchecks",
+  "version": "1.0.0",
+  "description": "A sample node project, demonstrating the use of Lob checks.",
+  "main": "./src/index.js",
+  "scripts": {
+    "start-dev": "babel-node ./src/index.js",
+    "dev": "nodemon --exec npm run start-dev",  
+    "start": "npm run build && node ./build/index.js",
+    "build": "npm run clean && npm run build-babel",
+    "clean": "npx rimraf /F /Q build",
+    "build-babel": "babel src --out-dir build --source-maps inline --copy-files",
+     
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lob/lob-node-examples.git"
+  },
+  "keywords": [
+    "Lob",
+    "Checks",
+    "Finance"
+  ],
+  "author": "Sid Maestre",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lob/lob-node-examples/issues"
+  },
+  "homepage": "https://github.com/lob/lob-node-examples#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.2",
+    "hbs": "^4.2.0",
+    "lob": "^6.5.2",
+    "mongoose": "^6.1.3",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.5",
+    "@babel/node": "^7.16.5",
+    "@babel/preset-env": "^7.16.5"
+  }
+}
